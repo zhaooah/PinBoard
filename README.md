@@ -1,4 +1,4 @@
 PinBoard
-========
+=================================
 
-Click &amp; Drag to create page!
+Click and Drag to create page!
