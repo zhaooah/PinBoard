@@ -1,0 +1,13 @@
+{
+    "name": "PinBoard",
+    "version": "0.1.0",
+    "author": "Hao",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "*",
+        "jade": "*"
+    }
+}
