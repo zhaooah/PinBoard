@@ -1,1 +1,2244 @@
-Hello World!
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+		meta(name="title", content="Create customized layout with PinBoard")
+		meta(name="description", content="Create customized layout with PinBoard")
+		meta(name="keywords", content="Create customized layout with PinBoard")
+		title Bootstrap Layout
+		// Le styles
+		link(href="pinboard/css/bootstrap-combined.min.css", rel="stylesheet")
+		link(href="pinboard/css/layoutit.css", rel="stylesheet")
+		link(href="pinboard/css/docs.min.css", rel="stylesheet")
+		// HTML5 shim, for IE6-8 support of HTML5 elements
+		//if lt IE 9
+			script(src="pinboard/js/html5shiv.js")
+		// Fav and touch icons
+		link(rel="shortcut icon", href="pinboard/img/favicon.png")
+
+
+body.edit(style='min-height: 660px; cursor: auto;')
+
+	.navbar.navbar-inverse.navbar-fixed-top
+		.navbar-inner
+			.container-fluid
+				.nav-collapse.collapse
+					ul#menu-layoutit.nav
+						li.divider-vertical
+						li
+							.btn-group
+								a.btn.btn-primary(href='/', target='_blank')
+									i.icon-home.icon-white
+									| Home
+							.btn-group(data-toggle='buttons-radio')
+								button#edit.btn.btn-primary.active(type='button')
+									i.icon-edit.icon-white
+									| Edit
+								button#devpreview.btn.btn-primary(type='button')
+									i.icon-eye-close.icon-white
+									| Developer
+								button#sourcepreview.btn.btn-primary(type='button')
+									i.icon-eye-open.icon-white
+									| Preview
+							.btn-group
+								button.btn.btn-primary(type='button', data-target='#downloadModal', rel='/build/downloadModal', role='button', data-toggle='modal')
+									i.icon-chevron-down.icon-white
+									| Download
+								button#clear.btn.btn-primary(href='#clear')
+									i.icon-trash.icon-white
+									| Clear
+				// /.nav-collapse
+	.container-fluid
+		.row-fluid
+			div
+				.sidebar-nav
+					ul.nav.nav-list.accordion-group
+						li.nav-header
+							.pull-right.popover-info
+								i.icon-question-sign
+								.popover.fade.right
+									.arrow
+									h3.popover-title Help
+									.popover-content
+										| TO CHANGE THE COLUMN CONFIGURATION YOU CAN EDIT THE DIFFERENT VALUES IN THE INPUT (THEY SHOULD ADD 12). IF YOU NEED MORE INFO PLEASE VISIT
+										a(target='_blank', href='http://twitter.github.io/bootstrap/scaffolding.html#gridSystem')  BOOTSTRAP GRID SYSTEM
+							i.icon-plus.icon-white
+							| GRID SYSTEM
+						li#estRows.rows(style='display: list-item;')
+							.lyrow.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								.preview
+									input(value='12', type='text')
+								.view
+									.row-fluid.clearfix
+										.span12.column
+							.lyrow.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								.preview
+									input(value='6 6', type='text')
+								.view
+									.row-fluid.clearfix
+										.span6.column
+										.span6.column
+							.lyrow.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								.preview
+									input(value='8 4', type='text')
+								.view
+									.row-fluid.clearfix
+										.span8.column
+										.span4.column
+							.lyrow.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								.preview
+									input(value='4 4 4', type='text')
+								.view
+									.row-fluid.clearfix
+										.span4.column
+										.span4.column
+										.span4.column
+							.lyrow.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								.preview
+									input(value='2 6 4', type='text')
+								.view
+									.row-fluid.clearfix
+										.span2.column
+										.span6.column
+										.span4.column
+							.lyrow.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								.preview
+									input(value='6 4 4', type='text')
+								.view
+									.row-fluid.clearfix
+										.col-xs-6.span4.column
+										.col-xs-6.span4.column
+										.col-xs-6.span4.column
+							.lyrow.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								.preview
+									input(value='9 3', type='text')
+								.view
+									.row-fluid.clearfix
+										.col-xs-6.span9.column
+										.col-xs-6.span3.column
+							.lyrow.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								.preview
+									input(value='3 3 3 3', type='text')
+								.view
+									.row-fluid.clearfix
+										.col-xs-3.span3.column
+										.col-xs-3.span3.column
+										.col-xs-3.span3.column
+										.col-xs-3.span3.column
+							.lyrow.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								.preview
+									input(value='Nested Columns', type='text')
+								.view
+									.row-fluid.clearfix
+										.span12.column
+											.row-fluid.clearfix
+												.span6.column
+												.span6.column
+					ul.nav.nav-list.accordion-group
+						li.nav-header
+							i.icon-plus.icon-white
+							| BASE CSS
+							.pull-right.popover-info
+								i.icon-question-sign
+								.popover.fade.right
+									.arrow
+									h3.popover-title Help
+									.popover-content
+										| DRAG & DROP THE ELEMENTS INSIDE THE COLUMNS WHERE YOU WANT TO INSERT IT. AND FROM THERE, YOU CAN CONFIGURE THE STYLE OF THAT ELEMENT. IF YOU NEED MORE INFO PLEASE VISIT
+										a(target='_blank', href='http://twitter.github.io/bootstrap/base-css.html') BASE CSS.
+						li#elmBase.boxes(style='display: none;')
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Align
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='text-left') Left
+											li
+												a(href='#', rel='text-center') Center
+											li
+												a(href='#', rel='text-right') Right
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Emphasis
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='muted') Muted
+											li
+												a(href='#', rel='text-warning') Warning
+											li
+												a(href='#', rel='text-error') Error
+											li
+												a(href='#', rel='text-info') Info
+											li
+												a(href='#', rel='text-success') Success
+								.preview Title
+								.view
+									h3(contenteditable='true') h3. Lorem ipsum dolor sit amet.
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Align
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='text-left') Left
+											li
+												a(href='#', rel='text-center') Center
+											li
+												a(href='#', rel='text-right') Right
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Emphasis
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='muted') muted
+											li
+												a(href='#', rel='text-warning') Warning
+											li
+												a(href='#', rel='text-error') Error
+											li
+												a(href='#', rel='text-info') Info
+											li
+												a(href='#', rel='text-success') Success
+									a.btn.btn-mini(href='#', rel='lead') Lead
+								.preview Paragraph
+								.view(contenteditable='true')
+									p
+										| Lorem ipsum dolor sit amet,
+										strong consectetur adipiscing elit
+										| . Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui. Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+								.preview Address
+								.view
+									address(contenteditable='true')
+										strong Twitter, Inc.
+										br
+										| 795 Folsom Ave, Suite 600
+										br
+										| San Francisco, CA 94107
+										br
+										abbr(title='Phone') P:
+										| (123) 456-7890
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									a.btn.btn-mini(href='#', rel='pull-right') Pull Right
+								.preview Blockquote
+								.view.clearfix
+									blockquote(contenteditable='true')
+										p
+											| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+										small
+											| Someone
+											cite(title='Source Title')  famous Source Title
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									a.btn.btn-mini(href='#', rel='unstyled') Unstyled
+									a.btn.btn-mini(href='#', rel='inline') Inline
+								.preview Unordered List
+								.view
+									ul(contenteditable='true')
+										li Lorem ipsum dolor sit amet
+										li Consectetur adipiscing elit
+										li Integer molestie lorem at massa
+										li Facilisis in pretium nisl aliquet
+										li Nulla volutpat aliquam velit
+										li Faucibus porta lacus fringilla vel
+										li Aenean sit amet erat nunc
+										li Eget porttitor lorem
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									a.btn.btn-mini(href='#', rel='unstyled') Unstyled
+									a.btn.btn-mini(href='#', rel='inline') Inline
+								.preview Ordered List
+								.view
+									ol(contenteditable='true')
+										li Lorem ipsum dolor sit amet
+										li Consectetur adipiscing elit
+										li Integer molestie lorem at massa
+										li Facilisis in pretium nisl aliquet
+										li Nulla volutpat aliquam velit
+										li Faucibus porta lacus fringilla vel
+										li Aenean sit amet erat nunc
+										li Eget porttitor lorem
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									a.btn.btn-mini(href='#', rel='dl-horizontal') Horizontal
+								.preview Description
+								.view
+									dl(contenteditable='true')
+										dt Rolex
+										dd A description list is perfect for defining terms.
+										dt Euismod
+										dd Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+										dd Donec id elit non mi porta gravida at eget metus.
+										dt Malesuada porta
+										dd Etiam porta sem malesuada magna mollis euismod.
+										dt Felis euismod semper eget lacinia
+										dd
+											| Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Style
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='table-striped') Striped
+											li
+												a(href='#', rel='table-bordered') Bordered
+									a.btn.btn-mini(href='#', rel='table-hover') Hover
+									a.btn.btn-mini(href='#', rel='table-condensed') Condensed
+								.preview Table
+								.view
+									table.table(contenteditable='true')
+										thead
+											tr
+												th #
+												th Product
+												th Payment Taken
+												th Status
+										tbody
+											tr
+												td 1
+												td TB - Monthly
+												td 01/04/2012
+												td Default
+											tr.success
+												td 1
+												td TB - Monthly
+												td 01/04/2012
+												td Approved
+											tr.error
+												td 2
+												td TB - Monthly
+												td 02/04/2012
+												td Declined
+											tr.warning
+												td 3
+												td TB - Monthly
+												td 03/04/2012
+												td Pending
+											tr.info
+												td 4
+												td TB - Monthly
+												td 04/04/2012
+												td Call in to confirm
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									a.btn.btn-mini(href='#', rel='form-inline') Inline
+								.preview Form
+								.view
+									form
+										fieldset
+											legend(contenteditable='true') Legend
+											label(contenteditable='true') Label name
+											input(type='text', placeholder='Type something…')
+											span.help-block(contenteditable='true') Example block-level help text here..
+											label.checkbox(contenteditable='true')
+												input(type='checkbox')
+												| Check me out
+											button.btn(type='submit', contenteditable='true') Submit
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									a.btn.btn-mini(href='#', rel='form-inline') Inline
+								.preview Search
+								.view
+									form.form-search
+										input.input-medium.search-query(type='text')
+										button.btn(type='submit', contenteditable='true') Search
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration  
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+								.preview Horizontal Form
+								.view
+									form.form-horizontal
+										.control-group
+											label.control-label(for='inputEmail', contenteditable='true') Email
+											.controls
+												input#inputEmail(placeholder='Email', type='text')
+										.control-group
+											label.control-label(for='inputPassword', contenteditable='true') Password
+											.controls
+												input#inputPassword(placeholder='Password', type='password')
+										.control-group
+											.controls
+												label.checkbox(contenteditable='true')
+													input(type='checkbox')
+													| Remember me
+												button.btn(type='submit', contenteditable='true') Sign In
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Styles
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='btn-primary') Primary
+											li
+												a(href='#', rel='btn-info') Info
+											li
+												a(href='#', rel='btn-success') Success
+											li
+												a(href='#', rel='btn-warning') Warning
+											li
+												a(href='#', rel='btn-danger') Danger
+											li
+												a(href='#', rel='btn-inverse') Inverse
+											li
+												a(href='#', rel='btn-link') Link
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Size
+											span.caret
+										ul.dropdown-menu
+											li
+												a(href='#', rel='btn-large') Large
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='btn-small') Small
+											li
+												a(href='#', rel='btn-mini') Mini
+									a.btn.btn-mini(href='#', rel='btn-block') Block
+									a.btn.btn-mini(href='#', rel='disabled') Disabled
+								.preview Button
+								.view
+									button.btn(type='button', contenteditable='true') Button
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Styles
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='img-rounded') Rounded
+											li
+												a(href='#', rel='img-circle') Circle
+											li
+												a(href='#', rel='img-polaroid') Polaroid
+								.preview Image
+								.view
+									img(alt='140x140', src='pinboard/img/a.jpg')
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+								.preview
+									| Dashboard
+									span.label.label-important NEW!
+								.view
+									.container-fluid
+										.row
+											.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+												h1.page-header Dashboard
+												.row.placeholders
+													.col-xs-6.col-sm-3.placeholder
+														img.img-responsive(data-src='holder.js/200x200/auto/sky', alt='Generic placeholder thumbnail')
+														h4 Label
+														span.text-muted Something else
+													.col-xs-6.col-sm-3.placeholder
+														img.img-responsive(data-src='holder.js/200x200/auto/vine', alt='Generic placeholder thumbnail')
+														h4 Label
+														span.text-muted Something else
+													.col-xs-6.col-sm-3.placeholder
+														img.img-responsive(data-src='holder.js/200x200/auto/sky', alt='Generic placeholder thumbnail')
+														h4 Label
+														span.text-muted Something else
+													.col-xs-6.col-sm-3.placeholder
+														img.img-responsive(data-src='holder.js/200x200/auto/vine', alt='Generic placeholder thumbnail')
+														h4 Label
+														span.text-muted Something else
+												h2.sub-header Section title
+												.table-responsive
+													table.table.table-striped
+														thead
+															tr
+																th #
+																th Header
+																th Header
+																th Header
+																th Header
+														tbody
+															tr
+																td 1,001
+																td Lorem
+																td ipsum
+																td dolor
+																td sit
+															tr
+																td 1,002
+																td amet
+																td consectetur
+																td adipiscing
+																td elit
+															tr
+																td 1,003
+																td Integer
+																td nec
+																td odio
+																td Praesent
+															tr
+																td 1,003
+																td libero
+																td Sed
+																td cursus
+																td ante
+															tr
+																td 1,004
+																td dapibus
+																td diam
+																td Sed
+																td nisi
+															tr
+																td 1,005
+																td Nulla
+																td quis
+																td sem
+																td at
+															tr
+																td 1,006
+																td nibh
+																td elementum
+																td imperdiet
+																td Duis
+															tr
+																td 1,007
+																td sagittis
+																td ipsum
+																td Praesent
+																td mauris
+															tr
+																td 1,008
+																td Fusce
+																td nec
+																td tellus
+																td sed
+															tr
+																td 1,009
+																td augue
+																td semper
+																td porta
+																td Mauris
+															tr
+																td 1,010
+																td massa
+																td Vestibulum
+																td lacinia
+																td arcu
+															tr
+																td 1,011
+																td eget
+																td nulla
+																td Class
+																td aptent
+															tr
+																td 1,012
+																td taciti
+																td sociosqu
+																td ad
+																td litora
+															tr
+																td 1,013
+																td torquent
+																td per
+																td conubia
+																td nostra
+															tr
+																td 1,014
+																td per
+																td inceptos
+																td himenaeos
+																td Curabitur
+															tr
+																td 1,015
+																td sodales
+																td ligula
+																td in
+																td libero
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+								.preview
+									| Color
+									span.label.label-important NEW!
+								.view
+									style(type='text/css')
+										.color-swatches .brand-primary
+											background-color: #428BCA
+										.color-swatches .brand-success
+											background-color: #5CB85C
+										.color-swatches .brand-info
+											background-color: #5BC0D
+										.color-swatches .brand-warning
+											background-color: #F0AD4E
+										.color-swatches .brand-danger
+											background-color: #D9534F
+										.color-swatches .gray-darker
+											background-color: #222222
+										.color-swatches .gray-dark
+											background-color: #333333
+										.color-swatches .gray
+											background-color: #555555
+										.color-swatches .gray-light
+											background-color: #999999
+										.color-swatches .gray-lighter
+											background-color: #EEEEEE
+
+									.bs-example
+										.color-swatches
+											.color-swatch.brand-primary
+											.color-swatch.brand-success
+											.color-swatch.brand-info
+											.color-swatch.brand-warning
+											.color-swatch.brand-danger
+										br
+										.color-swatches
+											.color-swatch.gray-darker
+											.color-swatch.gray-dark
+											.color-swatch.gray
+											.color-swatch.gray-light
+											.color-swatch.gray-lighter
+					ul.nav.nav-list.accordion-group
+						li.nav-header
+							i.icon-plus.icon-white
+							| COMPONENTS
+							.pull-right.popover-info
+								i.icon-question-sign
+								.popover.fade.right
+									.arrow
+									h3.popover-title Help
+									.popover-content
+										| DRAG & DROP THE ELEMENTS INSIDE THE COLUMNS WHERE YOU WANT TO INSERT IT. AND FROM THERE, YOU CAN CONFIGURE THE STYLE OF THAT COMPONENT. IF YOU NEED MORE INFO PLEASE VISIT
+										a(target='_blank', href='http://twitter.github.io/bootstrap/components.html') COMPONENTS.
+						li#elmComponents.boxes(style='display: none;')
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Orientation
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='btn-group-vertical') Vertical
+								.preview Button Group
+								.view
+									.btn-group
+										button.btn(type='button')
+											i.icon-align-left
+										button.btn(type='button')
+											i.icon-align-center
+										button.btn(type='button')
+											i.icon-align-right
+										button.btn(type='button')
+											i.icon-align-justify
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									a.btn.btn-mini(href='#', rel='dropup') Dropup
+								.preview Button Dropdowns
+								.view
+									.btn-group
+										button.btn(contenteditable='true') Action
+										button.btn.dropdown-toggle(data-toggle='dropdown')
+											span.caret
+										ul.dropdown-menu(contenteditable='true')
+											li
+												a(href='#') Action
+											li
+												a(href='#') Another Action
+											li
+												a(href='#') Something Else here
+											li.divider
+											li.dropdown-submenu
+												a(tabindex='-1', href='#') More Option
+												ul.dropdown-menu
+													li
+														a(href='#') Action
+													li
+														a(href='#') Another Action
+													li
+														a(href='#') Something Else here
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Styles
+											span.caret
+										ul.dropdown-menu
+											li
+												a(href='#', rel='nav-tabs') Default
+											li
+												a(href='#', rel='nav-pills') Pills
+									a.btn.btn-mini(href='#', rel='nav-stacked') Stacked
+								.preview Navs
+								.view
+									ul.nav.nav-tabs(contenteditable='true')
+										li.active
+											a(href='#') Home
+										li
+											a(href='#') Profile
+										li.disabled
+											a(href='#') Messages
+										li.dropdown.pull-right
+											a.dropdown-toggle(href='#', data-toggle='dropdown')
+												| Dropdown
+												b.caret
+											ul.dropdown-menu
+												li
+													a(href='#') Action
+												li
+													a(href='#') Another Action
+												li
+													a(href='#') Something else here
+												li.divider
+												li
+													a(href='#') Separated Link
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									a.btn.btn-mini(href='#', rel='well') Well
+								.preview Navigation List
+								.view
+									ul.nav.nav-list(contenteditable='true')
+										li.nav-header Headers
+										li.active
+											a(href='#') Home
+										li
+											a(href='#') Library
+										li
+											a(href='#') Application
+										li.nav-header Another List Header
+										li
+											a(href='#') Profile
+										li
+											a(href='#') Settings
+										li.divider
+										li
+											a(href='#') Help
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+								.preview Breadcrumb
+								.view
+									ul.breadcrumb(contenteditable='true')
+										li
+											a(href='#') Home
+											span.divider /
+										li
+											a(href='#') Library
+											span.divider /
+										li.active Application
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Size
+											span.caret
+										ul.dropdown-menu
+											li
+												a(href='#', rel='pagination-large') Large
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='pagination-small') Small
+											li
+												a(href='#', rel='pagination-mini') Mini
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Position
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='pagination-centered') Centered
+											li
+												a(href='#', rel='pagination-right') Right
+								.preview Pagination
+								.view
+									.pagination
+										ul(contenteditable='true')
+											li
+												a(href='#') Prev
+											li
+												a(href='#') 1
+											li
+												a(href='#') 2
+											li
+												a(href='#') 3
+											li
+												a(href='#') 4
+											li
+												a(href='#') 5
+											li
+												a(href='#') Next
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Styles
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='badge-success') Success
+											li
+												a(href='#', rel='badge-warning') Warning
+											li
+												a(href='#', rel='badge-important') Important
+											li
+												a(href='#', rel='badge-info') Info
+											li
+												a(href='#', rel='badge-inverse') Inverse
+								.preview Label
+								.view
+									span.label(contenteditable='true') Label
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Styles
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='badge-success') Success
+											li
+												a(href='#', rel='badge-warning') Warning
+											li
+												a(href='#', rel='badge-important') Important
+											li
+												a(href='#', rel='badge-info') Info
+											li
+												a(href='#', rel='badge-inverse') Inverse
+								.preview Badge
+								.view
+									span.badge(contenteditable='true') 1
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									a.btn.btn-mini(href='#', rel='well') Well
+								.preview Jumbotron
+								.view
+									.hero-unit(contenteditable='true')
+										h1 Hello, world!
+										p
+											| This is a template for a simple marketing or information website.
+											| It includes a large callout called the herop unit and three  supporting pieaces of content. Use iot as starting point to create something more unique
+										p
+											a.btn.btn-primary.btn-large(href='#') Learn More »
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+								.preview Jumbotron Narrow
+								.view
+									.header
+										ul.nav.nav-pills.pull-right
+											li.active
+												a(href='#') Home
+											li
+												a(href='#') About
+											li
+												a(href='#') Contact
+										h3.text-muted Project name
+									.jumbotron.well
+										h1 Jumbotron heading
+										p.lead
+											| Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+										p
+											a.btn.btn-lg.btn-success(href='#', role='button') Sign up today
+									.row.marketing
+										.col-lg-6
+											h4 Subheading
+											p
+												| Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+											h4 Subheading
+											p
+												| Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+											h4 Subheading
+											p Maecenas sed diam eget risus varius blandit sit amet non magna.
+										.col-lg-6
+											h4 Subheading
+											p
+												| Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+											h4 Subheading
+											p
+												| Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+											h4 Subheading
+											p Maecenas sed diam eget risus varius blandit sit amet non magna.
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+								.preview Page Header
+								.view
+									.page-header(contenteditable='true')
+										h1
+											| Example Page Header
+											small Subtext for header
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+								.preview Text
+								.view
+									h2(contenteditable='true') Header
+									p(contenteditable='true')
+										| Bacon ipsum dolor sit amet doner ham leberkas short loin hamburger, flank drumstick corned beef. Doner meatball venison bresaola biltong chicken. Turkey bacon shoulder strip steak spare ribs tri-tip. Rump ground round strip steak kielbasa short loin t-bone. Biltong capicola corned beef, ribeye chuck andouille sausage ham hock turkey spare ribs beef tail sirloin shank.
+									p
+										a.btn(href='#', contenteditable='true') View Deatils »
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+								.preview Thumbnails
+								.view
+									ul.thumbnails
+										li.span4
+											.thumbnail
+												img(alt='300x200', src='pinboard/img/people.jpg')
+												.caption(contenteditable='true')
+													h3 Thumbnail label
+													p
+														| Bacon ipsum dolor sit amet doner ham leberkas short loin hamburger, flank drumstick corned beef. Doner meatball venison bresaola biltong chicken. Turkey bacon shoulder strip steak spare ribs tri-tip. Rump ground round strip steak kielbasa short loin t-bone. Biltong capicola corned beef, ribeye chuck andouille sausage ham hock turkey spare ribs beef tail sirloin shank.
+													p
+														a.btn.btn-primary(href='#') Action
+														a.btn(href='#') Action
+										li.span4
+											.thumbnail
+												img(alt='300x200', src='pinboard/img/city.jpg')
+												.caption(contenteditable='true')
+													h3 Thumbnail label
+													p
+														| Bacon ipsum dolor sit amet doner ham leberkas short loin hamburger, flank drumstick corned beef. Doner meatball venison bresaola biltong chicken. Turkey bacon shoulder strip steak spare ribs tri-tip. Rump ground round strip steak kielbasa short loin t-bone. Biltong capicola corned beef, ribeye chuck andouille sausage ham hock turkey spare ribs beef tail sirloin shank.
+													p
+														a.btn.btn-primary(href='#') Action
+														a.btn(href='#') Action
+										li.span4
+											.thumbnail
+												img(alt='300x200', src='pinboard/img/sports.jpg')
+												.caption(contenteditable='true')
+													h3 Thumbnail label
+													p
+														| Bacon ipsum dolor sit amet doner ham leberkas short loin hamburger, flank drumstick corned beef. Doner meatball venison bresaola biltong chicken. Turkey bacon shoulder strip steak spare ribs tri-tip. Rump ground round strip steak kielbasa short loin t-bone. Biltong capicola corned beef, ribeye chuck andouille sausage ham hock turkey spare ribs beef tail sirloin shank.
+													p
+														a.btn.btn-primary(href='#') Action
+														a.btn(href='#') Action
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Colors
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='progress-info') Info
+											li
+												a(href='#', rel='progress-success') Success
+											li
+												a(href='#', rel='progress-warning') Warning
+											li
+												a(href='#', rel='progress-danger') Danger
+									a.btn.btn-mini(href='#', rel='progress-striped') Striped
+									a.btn.btn-mini(href='#', rel='active') Active
+								.preview Progress Bar
+								.view
+									.progress
+										.bar(style='width: 60%;')
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									a.btn.btn-mini(href='#', rel='well') Well
+								.preview Media Object
+								.view
+									.media
+										a.pull-left(href='#')
+											img.media-object(src='pinboard/img/a_002.jpg')
+										.media-body(contenteditable='true')
+											h4.media-heading Nested Media Header
+											| Bacon ipsum dolor sit amet doner ham leberkas short loin hamburger, flank drumstick corned beef. Doner meatball venison bresaola biltong chicken. Turkey bacon shoulder strip steak spare ribs tri-tip. Rump ground round strip steak kielbasa short loin t-bone. Biltong capicola corned beef, ribeye chuck andouille sausage ham hock turkey spare ribs beef tail sirloin shank.
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+								.preview List group
+								.view
+									.list-group(contenteditable='true')
+										a.list-group-item.active(href='#') Home
+										.list-group-item List header
+										.list-group-item
+											h4.list-group-item-heading List group item heading
+											p.list-group-item-text ...
+										.list-group-item
+											span.badge 14
+											| Help
+										a.list-group-item.active
+											span.badge 14
+											| Help
+							//
+								<div class="box box-element ui-draggable">
+										<a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+									<span class="configuration">
+										<span class="btn-group">
+									<button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Editor</button>
+									<a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">Styles <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+												<li class="" ><a href="#" rel="panel-default">Default</a></li>
+												<li class="" ><a href="#" rel="panel-primary">Primary</a></li>
+												<li class="" ><a href="#" rel="panel-success">Success</a></li>
+												<li class="" ><a href="#" rel="panel-info">Info</a></li>
+												<li class="" ><a href="#" rel="panel-warning">Warning</a></li>
+												<li class="" ><a href="#" rel="panel-danger">Danger</a></li>
+											</ul>
+								</span>
+															
+									</span>
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Styles
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='panel-default') Default
+											li
+												a(href='#', rel='panel-primary') Primary
+											li
+												a(href='#', rel='panel-success') Success
+											li
+												a(href='#', rel='panel-info') Info
+											li
+												a(href='#', rel='panel-warning') Warning
+											li
+												a(href='#', rel='panel-danger') Danger
+								.preview Panels
+								.view
+									.panel.panel-default
+										.panel-heading
+											h3.panel-title(contenteditable='true') Panel title
+										.panel-body(contenteditable='true')
+											| Panel content
+										.panel-footer(contenteditable='true')
+											| Panel footer
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								.preview
+									| Glyphicon
+									span.label.label-important NEW!
+								.view
+									ul.glyphicons
+										li
+											span.glyphicon.glyphicon-adjust
+											span.glyphicon-class .glyphicon .glyphicon-adjust
+										li
+											span.glyphicon.glyphicon-align-center
+											span.glyphicon-class .glyphicon .glyphicon-align-center
+										li
+											span.glyphicon.glyphicon-align-justify
+											span.glyphicon-class .glyphicon .glyphicon-align-justify
+										li
+											span.glyphicon.glyphicon-align-left
+											span.glyphicon-class .glyphicon .glyphicon-align-left
+										li
+											span.glyphicon.glyphicon-align-right
+											span.glyphicon-class .glyphicon .glyphicon-align-right
+										li
+											span.glyphicon.glyphicon-arrow-down
+											span.glyphicon-class .glyphicon .glyphicon-arrow-down
+										li
+											span.glyphicon.glyphicon-arrow-left
+											span.glyphicon-class .glyphicon .glyphicon-arrow-left
+										li
+											span.glyphicon.glyphicon-arrow-right
+											span.glyphicon-class .glyphicon .glyphicon-arrow-right
+										li
+											span.glyphicon.glyphicon-arrow-up
+											span.glyphicon-class .glyphicon .glyphicon-arrow-up
+										li
+											span.glyphicon.glyphicon-asterisk
+											span.glyphicon-class .glyphicon .glyphicon-asterisk
+										li
+											span.glyphicon.glyphicon-backward
+											span.glyphicon-class .glyphicon .glyphicon-backward
+										li
+											span.glyphicon.glyphicon-ban-circle
+											span.glyphicon-class .glyphicon .glyphicon-ban-circle
+										li
+											span.glyphicon.glyphicon-barcode
+											span.glyphicon-class .glyphicon .glyphicon-barcode
+										li
+											span.glyphicon.glyphicon-bell
+											span.glyphicon-class .glyphicon .glyphicon-bell
+										li
+											span.glyphicon.glyphicon-bold
+											span.glyphicon-class .glyphicon .glyphicon-bold
+										li
+											span.glyphicon.glyphicon-book
+											span.glyphicon-class .glyphicon .glyphicon-book
+										li
+											span.glyphicon.glyphicon-bookmark
+											span.glyphicon-class .glyphicon .glyphicon-bookmark
+										li
+											span.glyphicon.glyphicon-briefcase
+											span.glyphicon-class .glyphicon .glyphicon-briefcase
+										li
+											span.glyphicon.glyphicon-bullhorn
+											span.glyphicon-class .glyphicon .glyphicon-bullhorn
+										li
+											span.glyphicon.glyphicon-calendar
+											span.glyphicon-class .glyphicon .glyphicon-calendar
+										li
+											span.glyphicon.glyphicon-camera
+											span.glyphicon-class .glyphicon .glyphicon-camera
+										li
+											span.glyphicon.glyphicon-certificate
+											span.glyphicon-class .glyphicon .glyphicon-certificate
+										li
+											span.glyphicon.glyphicon-check
+											span.glyphicon-class .glyphicon .glyphicon-check
+										li
+											span.glyphicon.glyphicon-chevron-down
+											span.glyphicon-class .glyphicon .glyphicon-chevron-down
+										li
+											span.glyphicon.glyphicon-chevron-left
+											span.glyphicon-class .glyphicon .glyphicon-chevron-left
+										li
+											span.glyphicon.glyphicon-chevron-right
+											span.glyphicon-class .glyphicon .glyphicon-chevron-right
+										li
+											span.glyphicon.glyphicon-chevron-up
+											span.glyphicon-class .glyphicon .glyphicon-chevron-up
+										li
+											span.glyphicon.glyphicon-circle-arrow-down
+											span.glyphicon-class .glyphicon .glyphicon-circle-arrow-down
+										li
+											span.glyphicon.glyphicon-circle-arrow-left
+											span.glyphicon-class .glyphicon .glyphicon-circle-arrow-left
+										li
+											span.glyphicon.glyphicon-circle-arrow-right
+											span.glyphicon-class .glyphicon .glyphicon-circle-arrow-right
+										li
+											span.glyphicon.glyphicon-circle-arrow-up
+											span.glyphicon-class .glyphicon .glyphicon-circle-arrow-up
+										li
+											span.glyphicon.glyphicon-cloud
+											span.glyphicon-class .glyphicon .glyphicon-cloud
+										li
+											span.glyphicon.glyphicon-cloud-download
+											span.glyphicon-class .glyphicon .glyphicon-cloud-download
+										li
+											span.glyphicon.glyphicon-cloud-upload
+											span.glyphicon-class .glyphicon .glyphicon-cloud-upload
+										li
+											span.glyphicon.glyphicon-cog
+											span.glyphicon-class .glyphicon .glyphicon-cog
+										li
+											span.glyphicon.glyphicon-collapse-down
+											span.glyphicon-class .glyphicon .glyphicon-collapse-down
+										li
+											span.glyphicon.glyphicon-collapse-up
+											span.glyphicon-class .glyphicon .glyphicon-collapse-up
+										li
+											span.glyphicon.glyphicon-comment
+											span.glyphicon-class .glyphicon .glyphicon-comment
+										li
+											span.glyphicon.glyphicon-compressed
+											span.glyphicon-class .glyphicon .glyphicon-compressed
+										li
+											span.glyphicon.glyphicon-copyright-mark
+											span.glyphicon-class .glyphicon .glyphicon-copyright-mark
+										li
+											span.glyphicon.glyphicon-credit-card
+											span.glyphicon-class .glyphicon .glyphicon-credit-card
+										li
+											span.glyphicon.glyphicon-cutlery
+											span.glyphicon-class .glyphicon .glyphicon-cutlery
+										li
+											span.glyphicon.glyphicon-dashboard
+											span.glyphicon-class .glyphicon .glyphicon-dashboard
+										li
+											span.glyphicon.glyphicon-download
+											span.glyphicon-class .glyphicon .glyphicon-download
+										li
+											span.glyphicon.glyphicon-download-alt
+											span.glyphicon-class .glyphicon .glyphicon-download-alt
+										li
+											span.glyphicon.glyphicon-earphone
+											span.glyphicon-class .glyphicon .glyphicon-earphone
+										li
+											span.glyphicon.glyphicon-edit
+											span.glyphicon-class .glyphicon .glyphicon-edit
+										li
+											span.glyphicon.glyphicon-eject
+											span.glyphicon-class .glyphicon .glyphicon-eject
+										li
+											span.glyphicon.glyphicon-envelope
+											span.glyphicon-class .glyphicon .glyphicon-envelope
+										li
+											span.glyphicon.glyphicon-euro
+											span.glyphicon-class .glyphicon .glyphicon-euro
+										li
+											span.glyphicon.glyphicon-exclamation-sign
+											span.glyphicon-class .glyphicon .glyphicon-exclamation-sign
+										li
+											span.glyphicon.glyphicon-expand
+											span.glyphicon-class .glyphicon .glyphicon-expand
+										li
+											span.glyphicon.glyphicon-export
+											span.glyphicon-class .glyphicon .glyphicon-export
+										li
+											span.glyphicon.glyphicon-eye-close
+											span.glyphicon-class .glyphicon .glyphicon-eye-close
+										li
+											span.glyphicon.glyphicon-eye-open
+											span.glyphicon-class .glyphicon .glyphicon-eye-open
+										li
+											span.glyphicon.glyphicon-facetime-video
+											span.glyphicon-class .glyphicon .glyphicon-facetime-video
+										li
+											span.glyphicon.glyphicon-fast-backward
+											span.glyphicon-class .glyphicon .glyphicon-fast-backward
+										li
+											span.glyphicon.glyphicon-fast-forward
+											span.glyphicon-class .glyphicon .glyphicon-fast-forward
+										li
+											span.glyphicon.glyphicon-file
+											span.glyphicon-class .glyphicon .glyphicon-file
+										li
+											span.glyphicon.glyphicon-film
+											span.glyphicon-class .glyphicon .glyphicon-film
+										li
+											span.glyphicon.glyphicon-filter
+											span.glyphicon-class .glyphicon .glyphicon-filter
+										li
+											span.glyphicon.glyphicon-fire
+											span.glyphicon-class .glyphicon .glyphicon-fire
+										li
+											span.glyphicon.glyphicon-flag
+											span.glyphicon-class .glyphicon .glyphicon-flag
+										li
+											span.glyphicon.glyphicon-flash
+											span.glyphicon-class .glyphicon .glyphicon-flash
+										li
+											span.glyphicon.glyphicon-floppy-disk
+											span.glyphicon-class .glyphicon .glyphicon-floppy-disk
+										li
+											span.glyphicon.glyphicon-floppy-open
+											span.glyphicon-class .glyphicon .glyphicon-floppy-open
+										li
+											span.glyphicon.glyphicon-floppy-remove
+											span.glyphicon-class .glyphicon .glyphicon-floppy-remove
+										li
+											span.glyphicon.glyphicon-floppy-save
+											span.glyphicon-class .glyphicon .glyphicon-floppy-save
+										li
+											span.glyphicon.glyphicon-floppy-saved
+											span.glyphicon-class .glyphicon .glyphicon-floppy-saved
+										li
+											span.glyphicon.glyphicon-folder-close
+											span.glyphicon-class .glyphicon .glyphicon-folder-close
+										li
+											span.glyphicon.glyphicon-folder-open
+											span.glyphicon-class .glyphicon .glyphicon-folder-open
+										li
+											span.glyphicon.glyphicon-font
+											span.glyphicon-class .glyphicon .glyphicon-font
+										li
+											span.glyphicon.glyphicon-forward
+											span.glyphicon-class .glyphicon .glyphicon-forward
+										li
+											span.glyphicon.glyphicon-fullscreen
+											span.glyphicon-class .glyphicon .glyphicon-fullscreen
+										li
+											span.glyphicon.glyphicon-gbp
+											span.glyphicon-class .glyphicon .glyphicon-gbp
+										li
+											span.glyphicon.glyphicon-gift
+											span.glyphicon-class .glyphicon .glyphicon-gift
+										li
+											span.glyphicon.glyphicon-glass
+											span.glyphicon-class .glyphicon .glyphicon-glass
+										li
+											span.glyphicon.glyphicon-globe
+											span.glyphicon-class .glyphicon .glyphicon-globe
+										li
+											span.glyphicon.glyphicon-hand-down
+											span.glyphicon-class .glyphicon .glyphicon-hand-down
+										li
+											span.glyphicon.glyphicon-hand-left
+											span.glyphicon-class .glyphicon .glyphicon-hand-left
+										li
+											span.glyphicon.glyphicon-hand-right
+											span.glyphicon-class .glyphicon .glyphicon-hand-right
+										li
+											span.glyphicon.glyphicon-hand-up
+											span.glyphicon-class .glyphicon .glyphicon-hand-up
+										li
+											span.glyphicon.glyphicon-hd-video
+											span.glyphicon-class .glyphicon .glyphicon-hd-video
+										li
+											span.glyphicon.glyphicon-hdd
+											span.glyphicon-class .glyphicon .glyphicon-hdd
+										li
+											span.glyphicon.glyphicon-header
+											span.glyphicon-class .glyphicon .glyphicon-header
+										li
+											span.glyphicon.glyphicon-headphones
+											span.glyphicon-class .glyphicon .glyphicon-headphones
+										li
+											span.glyphicon.glyphicon-heart
+											span.glyphicon-class .glyphicon .glyphicon-heart
+										li
+											span.glyphicon.glyphicon-heart-empty
+											span.glyphicon-class .glyphicon .glyphicon-heart-empty
+										li
+											span.glyphicon.glyphicon-home
+											span.glyphicon-class .glyphicon .glyphicon-home
+										li
+											span.glyphicon.glyphicon-import
+											span.glyphicon-class .glyphicon .glyphicon-import
+										li
+											span.glyphicon.glyphicon-inbox
+											span.glyphicon-class .glyphicon .glyphicon-inbox
+										li
+											span.glyphicon.glyphicon-indent-left
+											span.glyphicon-class .glyphicon .glyphicon-indent-left
+										li
+											span.glyphicon.glyphicon-indent-right
+											span.glyphicon-class .glyphicon .glyphicon-indent-right
+										li
+											span.glyphicon.glyphicon-info-sign
+											span.glyphicon-class .glyphicon .glyphicon-info-sign
+										li
+											span.glyphicon.glyphicon-italic
+											span.glyphicon-class .glyphicon .glyphicon-italic
+										li
+											span.glyphicon.glyphicon-leaf
+											span.glyphicon-class .glyphicon .glyphicon-leaf
+										li
+											span.glyphicon.glyphicon-link
+											span.glyphicon-class .glyphicon .glyphicon-link
+										li
+											span.glyphicon.glyphicon-list
+											span.glyphicon-class .glyphicon .glyphicon-list
+										li
+											span.glyphicon.glyphicon-list-alt
+											span.glyphicon-class .glyphicon .glyphicon-list-alt
+										li
+											span.glyphicon.glyphicon-lock
+											span.glyphicon-class .glyphicon .glyphicon-lock
+										li
+											span.glyphicon.glyphicon-log-in
+											span.glyphicon-class .glyphicon .glyphicon-log-in
+										li
+											span.glyphicon.glyphicon-log-out
+											span.glyphicon-class .glyphicon .glyphicon-log-out
+										li
+											span.glyphicon.glyphicon-magnet
+											span.glyphicon-class .glyphicon .glyphicon-magnet
+										li
+											span.glyphicon.glyphicon-map-marker
+											span.glyphicon-class .glyphicon .glyphicon-map-marker
+										li
+											span.glyphicon.glyphicon-minus
+											span.glyphicon-class .glyphicon .glyphicon-minus
+										li
+											span.glyphicon.glyphicon-minus-sign
+											span.glyphicon-class .glyphicon .glyphicon-minus-sign
+										li
+											span.glyphicon.glyphicon-move
+											span.glyphicon-class .glyphicon .glyphicon-move
+										li
+											span.glyphicon.glyphicon-music
+											span.glyphicon-class .glyphicon .glyphicon-music
+										li
+											span.glyphicon.glyphicon-new-window
+											span.glyphicon-class .glyphicon .glyphicon-new-window
+										li
+											span.glyphicon.glyphicon-off
+											span.glyphicon-class .glyphicon .glyphicon-off
+										li
+											span.glyphicon.glyphicon-ok
+											span.glyphicon-class .glyphicon .glyphicon-ok
+										li
+											span.glyphicon.glyphicon-ok-circle
+											span.glyphicon-class .glyphicon .glyphicon-ok-circle
+										li
+											span.glyphicon.glyphicon-ok-sign
+											span.glyphicon-class .glyphicon .glyphicon-ok-sign
+										li
+											span.glyphicon.glyphicon-open
+											span.glyphicon-class .glyphicon .glyphicon-open
+										li
+											span.glyphicon.glyphicon-paperclip
+											span.glyphicon-class .glyphicon .glyphicon-paperclip
+										li
+											span.glyphicon.glyphicon-pause
+											span.glyphicon-class .glyphicon .glyphicon-pause
+										li
+											span.glyphicon.glyphicon-pencil
+											span.glyphicon-class .glyphicon .glyphicon-pencil
+										li
+											span.glyphicon.glyphicon-phone
+											span.glyphicon-class .glyphicon .glyphicon-phone
+										li
+											span.glyphicon.glyphicon-phone-alt
+											span.glyphicon-class .glyphicon .glyphicon-phone-alt
+										li
+											span.glyphicon.glyphicon-picture
+											span.glyphicon-class .glyphicon .glyphicon-picture
+										li
+											span.glyphicon.glyphicon-plane
+											span.glyphicon-class .glyphicon .glyphicon-plane
+										li
+											span.glyphicon.glyphicon-play
+											span.glyphicon-class .glyphicon .glyphicon-play
+										li
+											span.glyphicon.glyphicon-play-circle
+											span.glyphicon-class .glyphicon .glyphicon-play-circle
+										li
+											span.glyphicon.glyphicon-plus
+											span.glyphicon-class .glyphicon .glyphicon-plus
+										li
+											span.glyphicon.glyphicon-plus-sign
+											span.glyphicon-class .glyphicon .glyphicon-plus-sign
+										li
+											span.glyphicon.glyphicon-print
+											span.glyphicon-class .glyphicon .glyphicon-print
+										li
+											span.glyphicon.glyphicon-pushpin
+											span.glyphicon-class .glyphicon .glyphicon-pushpin
+										li
+											span.glyphicon.glyphicon-qrcode
+											span.glyphicon-class .glyphicon .glyphicon-qrcode
+										li
+											span.glyphicon.glyphicon-question-sign
+											span.glyphicon-class .glyphicon .glyphicon-question-sign
+										li
+											span.glyphicon.glyphicon-random
+											span.glyphicon-class .glyphicon .glyphicon-random
+										li
+											span.glyphicon.glyphicon-record
+											span.glyphicon-class .glyphicon .glyphicon-record
+										li
+											span.glyphicon.glyphicon-refresh
+											span.glyphicon-class .glyphicon .glyphicon-refresh
+										li
+											span.glyphicon.glyphicon-registration-mark
+											span.glyphicon-class .glyphicon .glyphicon-registration-mark
+										li
+											span.glyphicon.glyphicon-remove
+											span.glyphicon-class .glyphicon .glyphicon-remove
+										li
+											span.glyphicon.glyphicon-remove-circle
+											span.glyphicon-class .glyphicon .glyphicon-remove-circle
+										li
+											span.glyphicon.glyphicon-remove-sign
+											span.glyphicon-class .glyphicon .glyphicon-remove-sign
+										li
+											span.glyphicon.glyphicon-repeat
+											span.glyphicon-class .glyphicon .glyphicon-repeat
+										li
+											span.glyphicon.glyphicon-resize-full
+											span.glyphicon-class .glyphicon .glyphicon-resize-full
+										li
+											span.glyphicon.glyphicon-resize-horizontal
+											span.glyphicon-class .glyphicon .glyphicon-resize-horizontal
+										li
+											span.glyphicon.glyphicon-resize-small
+											span.glyphicon-class .glyphicon .glyphicon-resize-small
+										li
+											span.glyphicon.glyphicon-resize-vertical
+											span.glyphicon-class .glyphicon .glyphicon-resize-vertical
+										li
+											span.glyphicon.glyphicon-retweet
+											span.glyphicon-class .glyphicon .glyphicon-retweet
+										li
+											span.glyphicon.glyphicon-road
+											span.glyphicon-class .glyphicon .glyphicon-road
+										li
+											span.glyphicon.glyphicon-save
+											span.glyphicon-class .glyphicon .glyphicon-save
+										li
+											span.glyphicon.glyphicon-saved
+											span.glyphicon-class .glyphicon .glyphicon-saved
+										li
+											span.glyphicon.glyphicon-screenshot
+											span.glyphicon-class .glyphicon .glyphicon-screenshot
+										li
+											span.glyphicon.glyphicon-sd-video
+											span.glyphicon-class .glyphicon .glyphicon-sd-video
+										li
+											span.glyphicon.glyphicon-search
+											span.glyphicon-class .glyphicon .glyphicon-search
+										li
+											span.glyphicon.glyphicon-send
+											span.glyphicon-class .glyphicon .glyphicon-send
+										li
+											span.glyphicon.glyphicon-share
+											span.glyphicon-class .glyphicon .glyphicon-share
+										li
+											span.glyphicon.glyphicon-share-alt
+											span.glyphicon-class .glyphicon .glyphicon-share-alt
+										li
+											span.glyphicon.glyphicon-shopping-cart
+											span.glyphicon-class .glyphicon .glyphicon-shopping-cart
+										li
+											span.glyphicon.glyphicon-signal
+											span.glyphicon-class .glyphicon .glyphicon-signal
+										li
+											span.glyphicon.glyphicon-sort
+											span.glyphicon-class .glyphicon .glyphicon-sort
+										li
+											span.glyphicon.glyphicon-sort-by-alphabet
+											span.glyphicon-class .glyphicon .glyphicon-sort-by-alphabet
+										li
+											span.glyphicon.glyphicon-sort-by-alphabet-alt
+											span.glyphicon-class .glyphicon .glyphicon-sort-by-alphabet-alt
+										li
+											span.glyphicon.glyphicon-sort-by-attributes
+											span.glyphicon-class .glyphicon .glyphicon-sort-by-attributes
+										li
+											span.glyphicon.glyphicon-sort-by-attributes-alt
+											span.glyphicon-class .glyphicon .glyphicon-sort-by-attributes-alt
+										li
+											span.glyphicon.glyphicon-sort-by-order
+											span.glyphicon-class .glyphicon .glyphicon-sort-by-order
+										li
+											span.glyphicon.glyphicon-sort-by-order-alt
+											span.glyphicon-class .glyphicon .glyphicon-sort-by-order-alt
+										li
+											span.glyphicon.glyphicon-sound-5-1
+											span.glyphicon-class .glyphicon .glyphicon-sound-5-1
+										li
+											span.glyphicon.glyphicon-sound-6-1
+											span.glyphicon-class .glyphicon .glyphicon-sound-6-1
+										li
+											span.glyphicon.glyphicon-sound-7-1
+											span.glyphicon-class .glyphicon .glyphicon-sound-7-1
+										li
+											span.glyphicon.glyphicon-sound-dolby
+											span.glyphicon-class .glyphicon .glyphicon-sound-dolby
+										li
+											span.glyphicon.glyphicon-sound-stereo
+											span.glyphicon-class .glyphicon .glyphicon-sound-stereo
+										li
+											span.glyphicon.glyphicon-star
+											span.glyphicon-class .glyphicon .glyphicon-star
+										li
+											span.glyphicon.glyphicon-star-empty
+											span.glyphicon-class .glyphicon .glyphicon-star-empty
+										li
+											span.glyphicon.glyphicon-stats
+											span.glyphicon-class .glyphicon .glyphicon-stats
+										li
+											span.glyphicon.glyphicon-step-backward
+											span.glyphicon-class .glyphicon .glyphicon-step-backward
+										li
+											span.glyphicon.glyphicon-step-forward
+											span.glyphicon-class .glyphicon .glyphicon-step-forward
+										li
+											span.glyphicon.glyphicon-stop
+											span.glyphicon-class .glyphicon .glyphicon-stop
+										li
+											span.glyphicon.glyphicon-subtitles
+											span.glyphicon-class .glyphicon .glyphicon-subtitles
+										li
+											span.glyphicon.glyphicon-tag
+											span.glyphicon-class .glyphicon .glyphicon-tag
+										li
+											span.glyphicon.glyphicon-tags
+											span.glyphicon-class .glyphicon .glyphicon-tags
+										li
+											span.glyphicon.glyphicon-tasks
+											span.glyphicon-class .glyphicon .glyphicon-tasks
+										li
+											span.glyphicon.glyphicon-text-height
+											span.glyphicon-class .glyphicon .glyphicon-text-height
+										li
+											span.glyphicon.glyphicon-text-width
+											span.glyphicon-class .glyphicon .glyphicon-text-width
+										li
+											span.glyphicon.glyphicon-th
+											span.glyphicon-class .glyphicon .glyphicon-th
+										li
+											span.glyphicon.glyphicon-th-large
+											span.glyphicon-class .glyphicon .glyphicon-th-large
+										li
+											span.glyphicon.glyphicon-th-list
+											span.glyphicon-class .glyphicon .glyphicon-th-list
+										li
+											span.glyphicon.glyphicon-thumbs-down
+											span.glyphicon-class .glyphicon .glyphicon-thumbs-down
+										li
+											span.glyphicon.glyphicon-thumbs-up
+											span.glyphicon-class .glyphicon .glyphicon-thumbs-up
+										li
+											span.glyphicon.glyphicon-time
+											span.glyphicon-class .glyphicon .glyphicon-time
+										li
+											span.glyphicon.glyphicon-tint
+											span.glyphicon-class .glyphicon .glyphicon-tint
+										li
+											span.glyphicon.glyphicon-tower
+											span.glyphicon-class .glyphicon .glyphicon-tower
+										li
+											span.glyphicon.glyphicon-transfer
+											span.glyphicon-class .glyphicon .glyphicon-transfer
+										li
+											span.glyphicon.glyphicon-trash
+											span.glyphicon-class .glyphicon .glyphicon-trash
+										li
+											span.glyphicon.glyphicon-tree-conifer
+											span.glyphicon-class .glyphicon .glyphicon-tree-conifer
+										li
+											span.glyphicon.glyphicon-tree-deciduous
+											span.glyphicon-class .glyphicon .glyphicon-tree-deciduous
+										li
+											span.glyphicon.glyphicon-unchecked
+											span.glyphicon-class .glyphicon .glyphicon-unchecked
+										li
+											span.glyphicon.glyphicon-upload
+											span.glyphicon-class .glyphicon .glyphicon-upload
+										li
+											span.glyphicon.glyphicon-usd
+											span.glyphicon-class .glyphicon .glyphicon-usd
+										li
+											span.glyphicon.glyphicon-user
+											span.glyphicon-class .glyphicon .glyphicon-user
+										li
+											span.glyphicon.glyphicon-volume-down
+											span.glyphicon-class .glyphicon .glyphicon-volume-down
+										li
+											span.glyphicon.glyphicon-volume-off
+											span.glyphicon-class .glyphicon .glyphicon-volume-off
+										li
+											span.glyphicon.glyphicon-volume-up
+											span.glyphicon-class .glyphicon .glyphicon-volume-up
+										li
+											span.glyphicon.glyphicon-warning-sign
+											span.glyphicon-class .glyphicon .glyphicon-warning-sign
+										li
+											span.glyphicon.glyphicon-wrench
+											span.glyphicon-class .glyphicon .glyphicon-wrench
+										li
+											span.glyphicon.glyphicon-zoom-in
+											span.glyphicon-class .glyphicon .glyphicon-zoom-in
+										li
+											span.glyphicon.glyphicon-zoom-out
+											span.glyphicon-class .glyphicon .glyphicon-zoom-out
+					ul.nav.nav-list.accordion-group
+						li.nav-header
+							i.icon-plus.icon-white
+							| JAVASCRIPT
+							.pull-right.popover-info
+								i.icon-question-sign
+								.popover.fade.right
+									.arrow
+									h3.popover-title Help
+									.popover-content
+										| DRAG & DROP THE ELEMENTS INSIDE THE COLUMNS WHERE YOU WANT TO INSERT IT. AND FROM THERE, YOU CAN CONFIGURE THE STYLE OF THAT JAVASCRIPT. IF YOU NEED MORE INFO PLEASE VISIT
+										a(target='_blank', href='http://twitter.github.io/bootstrap/javascript.html') JAVASCRIPT.
+						li#elmJS.boxes.mute(style='display: none;')
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								.preview Modal
+								.view
+									// Button to trigger modal
+									a#myModalLink.btn(href='#myModalContainer', role='button', data-toggle='modal', contenteditable='true') Launch Demo Modal
+									// Modal
+									#myModalContainer.modal.hide.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+										.modal-header
+											button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+											h3#myModalLabel(contenteditable='true') Title
+										.modal-body
+											p(contenteditable='true')
+												| Bacon ipsum dolor sit amet doner ham leberkas short loin hamburger, flank drumstick corned beef. Doner meatball venison bresaola biltong chicken. Turkey bacon shoulder strip steak spare ribs tri-tip. Rump ground round strip steak kielbasa short loin t-bone. Biltong capicola corned beef, ribeye chuck andouille sausage ham hock turkey spare ribs beef tail sirloin shank.
+										.modal-footer
+											button.btn(data-dismiss='modal', aria-hidden='true', contenteditable='true') Cancel
+											button.btn.btn-primary(contenteditable='true') Save Changes
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									a.btn.btn-mini(href='#', rel='navbar-inverse') Inverse
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Position
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='navbar-static-top') Static to Top
+											li
+												a(href='#', rel='navbar-fixed-top') Fixed to Top
+											li
+												a(href='#', rel='navbar-fixed-bottom') Fixed to Bottom
+								.preview Navbar
+								.view
+									.navbar
+										.navbar-inner
+											.container-fluid
+												a.btn.btn-navbar(data-target='.navbar-responsive-collapse', data-toggle='collapse')
+													span.icon-bar
+													span.icon-bar
+													span.icon-bar
+												a.brand(href='#', contenteditable='true') Title
+												.nav-collapse.collapse.navbar-responsive-collapse
+													ul.nav(contenteditable='true')
+														li.active
+															a(href='#') Home
+														li
+															a(href='#') Link
+														li
+															a(href='#') Link
+														li.dropdown
+															a.dropdown-toggle(data-toggle='dropdown', href='#')
+																| Dropdown
+																b.caret
+															ul.dropdown-menu
+																li
+																	a(href='#') Action
+																li
+																	a(href='#') Another Action
+																li
+																	a(href='#') Action 3
+																li.divider
+																li.nav-header NAV HEADER
+																li
+																	a(href='#') Separated Link
+																li
+																	a(href='#') One More Separated Link
+													ul.nav.pull-right(contenteditable='true')
+														li
+															a(href='#') Link
+														li.divider-vertical
+														li.dropdown
+															a.dropdown-toggle(data-toggle='dropdown', href='#')
+																| Dropdown
+																b.caret
+															ul.dropdown-menu
+																li
+																	a(href='#') Action
+																li
+																	a(href='#') Another Action
+																li
+																	a(href='#') Something Else Here
+																li.divider
+																li
+																	a(href='#') Separated Link
+												// /.nav-collapse
+										// /navbar-inner
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Position
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='tabs-below') Bottom
+											li
+												a(href='#', rel='tabs-left') Left
+											li
+												a(href='#', rel='tabs-right') Right
+								.preview Tabs
+								.view
+									#myTabs.tabbable
+										// Only required for left/right tabs
+										ul.nav.nav-tabs
+											li.active
+												a(href='#tab1', data-toggle='tab', contenteditable='true') Section 1
+											li
+												a(href='#tab2', data-toggle='tab', contenteditable='true') Section 2
+										.tab-content
+											#tab1.tab-pane.active(contenteditable='true')
+												p
+													| Bacon ipsum dolor sit amet doner ham leberkas short loin hamburger, flank drumstick corned beef. Doner meatball venison bresaola biltong chicken. Turkey bacon shoulder strip steak spare ribs tri-tip. Rump ground round strip steak kielbasa short loin t-bone. Biltong capicola corned beef, ribeye chuck andouille sausage ham hock turkey spare ribs beef tail sirloin shank.
+											#tab2.tab-pane(contenteditable='true')
+												p
+													| Sausage jerky hamburger, andouille salami meatloaf ham hock shank pork corned beef. Boudin spare ribs flank pork loin pork kevin chicken rump cow, ribeye ham tongue. Pork loin jowl filet mignon swine bresaola andouille doner tenderloin ball tip pork. Chicken meatball chuck turkey, jowl ham hamburger salami tenderloin jerky kevin capicola cow andouille. Pig tail pork filet mignon hamburger ham hock. Capicola brisket pork belly, doner cow pastrami corned beef.
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									span.btn-group
+										a.btn.btn-mini.dropdown-toggle(data-toggle='dropdown', href='#')
+											| Styles
+											span.caret
+										ul.dropdown-menu
+											li.active
+												a(href='#', rel='') Default
+											li
+												a(href='#', rel='alert-info') Info
+											li
+												a(href='#', rel='alert-error') Error
+											li
+												a(href='#', rel='alert-success') Success
+								.preview Alerts
+								.view
+									.alert(contenteditable='true')
+										button.close(type='button', data-dismiss='alert') ×
+										h4 Alert!
+										strong Warning!
+										| Bacon ipsum dolor sit amet ground round culpa elit, irure incididunt short ribs tongue sed.
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+								.preview Collapse
+								.view
+									#myAccordion.accordion
+										.accordion-group
+											.accordion-heading
+												a.accordion-toggle(data-toggle='collapse', data-parent='#myAccordion', href='#collapseOne', contenteditable='true') Group Item  #1 
+											#collapseOne.accordion-body.collapse.in
+												.accordion-inner(contenteditable='true')
+													| Bacon ipsum dolor sit amet ground round culpa elit, irure incididunt short ribs tongue sed. Chicken swine cupidatat deserunt. Tongue short ribs bacon bresaola sausage. Rump biltong ribeye tri-tip tenderloin kielbasa. Meatloaf consequat voluptate dolor pork belly t-bone, turducken cow sunt sint.
+										.accordion-group
+											.accordion-heading
+												a.accordion-toggle(data-toggle='collapse', data-parent='#myAccordion', href='#collapseTwo', contenteditable='true')  Group Item #2 
+											#collapseTwo.accordion-body.collapse
+												.accordion-inner(contenteditable='true')
+													| Flank drumstick culpa ground round mollit enim turducken eu bacon pork chop. Prosciutto short loin est short ribs drumstick pork loin salami cillum hamburger beef excepteur veniam meatloaf. Turducken consectetur jowl occaecat eu pancetta sunt ut pork loin. Non shank boudin frankfurter bresaola.
+							.box.box-element.ui-draggable
+								a.remove.label.label-important(href='#close')
+									i.icon-remove.icon-white
+									| Remove
+								span.drag.label
+									i.icon-move
+									| Drag
+								span.configuration
+									button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+								.preview Carousel
+								.view
+									#myCarousel.carousel.slide
+										ol.carousel-indicators
+											li.active(data-slide-to='0', data-target='#myCarousel')
+											li(data-slide-to='1', data-target='#myCarousel')
+											li(data-slide-to='2', data-target='#myCarousel')
+										.carousel-inner
+											.item.active
+												img(alt='', src='pinboard/img/1.jpg')
+												.carousel-caption(contenteditable='true')
+													h4 First Thumbnail Label
+													p
+														| Bacon ipsum dolor sit amet ground round culpa elit, irure incididunt short ribs tongue sed. Chicken swine cupidatat deserunt. Tongue short ribs bacon bresaola sausage. Rump biltong ribeye tri-tip tenderloin kielbasa. Meatloaf consequat voluptate dolor pork belly t-bone, turducken cow sunt sint.
+											.item
+												img(alt='', src='pinboard/img/2.jpg')
+												.carousel-caption(contenteditable='true')
+													h4 Second Thumbnail Label
+													p
+														| Flank drumstick culpa ground round mollit enim turducken eu bacon pork chop. Prosciutto short loin est short ribs drumstick pork loin salami cillum hamburger beef excepteur veniam meatloaf. Turducken consectetur jowl occaecat eu pancetta sunt ut pork loin. Non shank boudin frankfurter bresaola.
+											.item
+												img(alt='', src='pinboard/img/3.jpg')
+												.carousel-caption(contenteditable='true')
+													h4 Third Thumbnail Label
+													p
+														| Veniam in aute, consequat hamburger mollit nisi leberkas chuck ut prosciutto drumstick short loin frankfurter. Aute salami duis voluptate magna kielbasa swine in. Magna pancetta chuck, aliqua laboris ribeye consectetur jerky prosciutto culpa voluptate brisket sausage bresaola. Jerky ut hamburger tempor, ribeye qui pastrami veniam shoulder.
+										a.left.carousel-control(data-slide='prev', href='#myCarousel') ‹
+										a.right.carousel-control(data-slide='next', href='#myCarousel') ›
+			// /span
+			.demo.ui-sortable(style='min-height: 304px; ')
+				.lyrow
+					a.remove.label.label-important(href='#close')
+						i.icon-remove.icon-white
+						| remove
+					span.drag.label
+						i.icon-move
+						| drag
+					.preview 9 3
+					.view
+						.row-fluid.clearfix
+							.span12.column.ui-sortable
+								.box.box-element.ui-draggable(style='display: block; ')
+									a.remove.label.label-important(href='#close')
+										i.icon-remove.icon-white
+										| Remove
+									span.drag.label
+										i.icon-move
+										| Drag
+									span.configuration
+										button.btn.btn-mini(type='button', data-target='#editorModal', role='button', data-toggle='modal') Editor
+										a.btn.btn-mini(href='#', rel='well') Well
+									.preview Jumbotron
+									.view
+										.hero-unit(contenteditable='true')
+											h1 Hello, world!
+											p This is a template for a simple marketing or informational website.
+											p
+												| It includes a large callout called the hero unit and three supporting pieces of content.
+											| Use it as a starting point to create something more unique.
+											p
+			// /span
+			#download-layout
+				.container-fluid
+		// /row
+	// /.fluid-container
+	#editorModal.modal.hide.fade(role='dialog')
+		.modal-header
+			a.close(data-dismiss='modal') ×
+			h3 Save your Layout
+		.modal-body
+			p
+				textarea#contenteditor
+		.modal-footer
+			a#savecontent.btn.btn-primary(data-dismiss='modal') Save
+			a.btn(data-dismiss='modal') Cancel
+	#downloadModal.modal.hide.fade(role='dialog')
+		.modal-header
+			a.close(data-dismiss='modal') ×
+			h3 Save
+		.modal-body
+			p Choose how to save your layout
+			.btn-group
+				button#fluidPage.active.btn.btn-info(type='button')
+					i.icon-fullscreen.icon-white
+					| Fluid Page
+				button#fixedPage.btn.btn-info(type='button')
+					i.icon-screenshot.icon-white
+					| Fixed page
+			br
+			br
+			p
+				textarea
+		.modal-footer
+			a.btn(data-dismiss='modal', onclick='javascript:saveHtml();') Save
+
+
+		script(type="text/javascript", src="pinboard/js/jquery-2.0.0.min.js")
+		//if lt IE 9
+		script(type="text/javascript", src="http://code.jquery.com/jquery-1.9.1.min.js")
+		script(type="text/javascript", src="pinboard/js/bootstrap.min.js")
+		script(type="text/javascript", src="pinboard/js/jquery-ui.js")
+		script(type="text/javascript", src="pinboard/js/jquery.ui.touch-punch.min.js")
+		script(type="text/javascript", src="pinboard/js/jquery.htmlClean.js")
+		script(type="text/javascript", src="pinboard/ckeditor/ckeditor.js")
+		script(type="text/javascript", src="pinboard/ckeditor/config.js")
+		script(type="text/javascript", src="pinboard/js/scripts.js")
+		script(type="text/javascript", src="pinboard/js/FileSaver.js")
+		script(type="text/javascript", src="pinboard/js/blob.js")
+		script(src="pinboard/js/docs.min.js")

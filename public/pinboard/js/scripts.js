@@ -1,3 +1,4 @@
+var webpage = "";
 function supportstorage() {
 	if (typeof window.localStorage=='object') 
 		return true;
@@ -44,7 +45,7 @@ function saveLayout(){
 	});*/
 }
 
-function downloadLayout(){
+ function downloadLayout(){
 	
 	$.ajax({  
 		type: "POST",  
@@ -286,6 +287,7 @@ function downloadLayoutSrc() {
 	$("#download-layout").html(formatSrc);
 	$("#downloadModal textarea").empty();
 	$("#downloadModal textarea").val(formatSrc)
+	webpage = formatSrc;
 }
 
 var currentDocument = null;
@@ -328,12 +330,12 @@ $(document).ready(function() {
 	CKEDITOR.disableAutoInline = true;
 	restoreData();
 	var contenthandle = CKEDITOR.replace( 'contenteditor' ,{
-		language: 'zh-cn',
-		contentsCss: ['css/bootstrap-combined.min.css'],
+		language: 'en',
+		contentsCss: ['pinboard/css/bootstrap-combined.min.css'],
 		allowedContent: true
 	});
-	$("body").css("min-height", $(window).height() - 90);
-	$(".demo").css("min-height", $(window).height() - 160);
+	$("body").css("min-height", $(window).height() - 50);
+	$(".demo").css("min-height", $(window).height() - 130);
 	$(".sidebar-nav .lyrow").draggable({
 		connectToSortable: ".demo",
 		helper: "clone",
@@ -465,3 +467,36 @@ $(document).ready(function() {
 		handleSaveLayout()
 	}, timerSave)
 })
+
+function saveHtml() 
+			{
+			webpage = '<html>\n<head>\n<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-2.0.0.min.js"></script>\n<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-ui"></script>\n<link href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">\n<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/bootstrap.min.js"></script>\n</head>\n<body>\n'+ webpage +'\n</body>\n</html>'
+			/* FM aka Vegetam Added the function that save the file in the directory Downloads. Work only to Chrome Firefox And IE*/
+			if (navigator.appName =="Microsoft Internet Explorer" && window.ActiveXObject)
+			{
+			var locationFile = location.href.toString();
+			var dlg = false;
+			with(document){
+			ir=createElement('iframe');
+			ir.id='ifr';
+			ir.location='about.blank';
+			ir.style.display='none';
+			body.appendChild(ir);
+			with(getElementById('ifr').contentWindow.document){
+			open("text/html", "replace");
+			charset = "utf-8";
+			write(webpage);
+			close();
+			document.charset = "utf-8";
+			dlg = execCommand('SaveAs', false, locationFile+"webpage.html");
+			}
+    return dlg;
+			}
+			}
+			else{
+			webpage = webpage;
+			var blob = new Blob([webpage], {type: "text/html;charset=utf-8"});
+			saveAs(blob, "webpage.html");
+		}
+		}
+
